@@ -1,0 +1,41 @@
+query GetProductsToShop(
+  $filters: FiltersInput
+  $limit: Float
+  $sortBy: SortBy
+  $order: SortOrderScalar
+  $skip: Float
+) {
+  getProductsToShop(
+    filters: $filters
+    limit: $limit
+    sortBy: $sortBy
+    order: $order
+    skip: $skip
+  ) {
+    size
+    products {
+      wood {
+        _id
+        name
+      }
+      brand {
+        _id
+        name
+      }
+      _id
+      name
+      description
+      price
+      shipping
+      available
+      frets
+      sold
+      publish
+      images {
+        public_id
+        url
+      }
+      createdAt
+    }
+  }
+}

@@ -1,0 +1,5 @@
+mutation RemoveImage($publicId: String!) {
+  removeImage(public_id: $publicId) {
+    success
+  }
+}

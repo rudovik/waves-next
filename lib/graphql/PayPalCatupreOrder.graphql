@@ -1,0 +1,6 @@
+mutation CaptureOrder($orderId: String!) {
+  captureOrder(orderId: $orderId) {
+    id
+    status
+  }
+}

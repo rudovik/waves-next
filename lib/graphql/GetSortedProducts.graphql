@@ -1,0 +1,30 @@
+query GetSortedProducts(
+  $limit: Float
+  $sortBy: SortBy
+  $order: SortOrderScalar
+) {
+  getSortedProducts(limit: $limit, sortBy: $sortBy, order: $order) {
+    _id
+    name
+    description
+    price
+    brand {
+      _id
+      name
+    }
+    shipping
+    available
+    wood {
+      _id
+      name
+    }
+    frets
+    sold
+    publish
+    images {
+      public_id
+      url
+    }
+    createdAt
+  }
+}

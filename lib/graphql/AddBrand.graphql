@@ -1,0 +1,5 @@
+mutation AddBrand($name: String!) {
+  addBrand(name: $name) {
+    success
+  }
+}

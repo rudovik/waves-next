@@ -1,0 +1,30 @@
+query GetCartProducts {
+  getCartProducts {
+    productId {
+      price
+      _id
+      name
+      description
+      brand {
+        _id
+        name
+      }
+      shipping
+      available
+      wood {
+        _id
+        name
+      }
+      frets
+      sold
+      publish
+      images {
+        url
+        public_id
+      }
+      createdAt
+    }
+    quantity
+    date
+  }
+}

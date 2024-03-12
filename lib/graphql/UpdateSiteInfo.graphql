@@ -1,0 +1,5 @@
+mutation UpdateSiteInfo($siteInfoInput: SiteInfoInput!, $name: String!) {
+  updateSiteInfo(siteInfoInput: $siteInfoInput, name: $name) {
+    success
+  }
+}

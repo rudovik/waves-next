@@ -1,0 +1,12 @@
+query GetSiteData {
+  getSiteData {
+    name
+    featured
+    siteInfo {
+      address
+      hours
+      phone
+      email
+    }
+  }
+}

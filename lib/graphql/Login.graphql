@@ -1,0 +1,25 @@
+mutation Login($input: AuthInput!) {
+  login(input: $input) {
+    user {
+      _id
+      email
+      history {
+        dateOfPurchase
+        name
+        brand
+        price
+        quantity
+        productId
+        paymentId
+      }
+      lastname
+      name
+      role
+      token
+      cart {
+        quantity
+        date
+      }
+    }
+  }
+}

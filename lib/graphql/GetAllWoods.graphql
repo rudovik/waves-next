@@ -1,0 +1,6 @@
+query GetAllWoods {
+  getAllWoods {
+    _id
+    name
+  }
+}

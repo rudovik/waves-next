@@ -1,0 +1,11 @@
+mutation CreateOrder {
+  createOrder {
+    status
+    id
+    links {
+      href
+      rel
+      method
+    }
+  }
+}

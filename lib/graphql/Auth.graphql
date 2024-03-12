@@ -1,0 +1,26 @@
+query Auth {
+  auth {
+    isAdmin
+    isAuth
+    email
+    name
+    lastname
+    role
+    history {
+      dateOfPurchase
+      name
+      brand
+      price
+      quantity
+      productId
+      paymentId
+    }
+    cart {
+      quantity
+      date
+      productId {
+        _id
+      }
+    }
+  }
+}

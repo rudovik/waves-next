@@ -1,0 +1,8 @@
+schema: "lib/schema.graphqls"
+documents: "**/*.graphql"
+plugins:
+  - typescript-operations
+  - typescript-react-apollo
+config:
+  apolloReactComponentsImportFrom: "@apollo/experimental-nextjs-app-support/ssr"
+cacheDir: __generated__

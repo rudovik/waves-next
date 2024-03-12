@@ -1,0 +1,25 @@
+query GetProductsById($items: String!, $type: String!) {
+  getProductsById(items: $items, type: $type) {
+    _id
+    name
+    description
+    price
+    brand {
+      _id
+      name
+    }
+    shipping
+    available
+    wood {
+      _id
+      name
+    }
+    frets
+    sold
+    publish
+    images {
+      public_id
+      url
+    }
+  }
+}

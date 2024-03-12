@@ -1,0 +1,5 @@
+mutation AddProductToCart($productId: ObjectId!) {
+  addProductToCart(productId: $productId) {
+    success
+  }
+}
