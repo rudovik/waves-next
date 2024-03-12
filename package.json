@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npx graphql-let && next dev",
+    "build": "npx graphql-let && next build",
     "start": "next start",
     "lint": "next lint"
   },
