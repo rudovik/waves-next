@@ -1,4 +1,4 @@
 export const NEXT_URL =
   typeof window === "undefined"
-    ? "https://localhost:3000"
+    ? "http://127.0.0.1:" + process.env.PORT || 3000
     : "https://waves-next.vercel.app"
