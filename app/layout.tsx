@@ -11,6 +11,7 @@ import { getAuthCookie } from "lib/getAuthCookie"
 import { oswald } from "./fonts"
 import { BackdropComponent } from "components/Backdrop"
 import { Suspense } from "react"
+import { getHostAndCookie } from "lib/getHostAndCookie"
 
 export default async function RootLayout({
   children,
@@ -18,6 +19,7 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   const authCookie = getAuthCookie()
+  const { host, cookie } = getHostAndCookie()
 
   return (
     <html lang="en">
@@ -34,7 +36,7 @@ export default async function RootLayout({
         <AppRouterCacheProvider>
           {/* <div> */}
           {/* <Suspense fallback={<BackdropComponent />}> */}
-          <ApolloWrapper>
+          <ApolloWrapper host={host} cookie={cookie}>
             <AuthProvider authCookie={authCookie}>
               <Header />
               <div className="page_container">{children}</div>
